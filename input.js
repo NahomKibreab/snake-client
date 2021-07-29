@@ -1,5 +1,6 @@
 // Stores the active TCP connection object.
 let connection;
+const { Move_Up, Move_Right, Move_Left, Move_Down } = require("./constants");
 
 const setupInput = function (conn) {
   connection = conn;
@@ -21,22 +22,22 @@ const handleUserInput = function (key) {
       process.exit();
     case "w":
       setTimeout(() => {
-        connection.write("Move: up");
+        connection.write(Move_Up);
       }, 50);
       break;
     case "a":
       setTimeout(() => {
-        connection.write("Move: left");
+        connection.write(Move_Left);
       }, 50);
       break;
     case "s":
       setTimeout(() => {
-        connection.write("Move: down");
+        connection.write(Move_Down);
       }, 50);
       break;
     case "d":
       setTimeout(() => {
-        connection.write("Move: right");
+        connection.write(Move_Right);
       }, 50);
       break;
     case "x":
