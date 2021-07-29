@@ -20,27 +20,28 @@ const handleUserInput = function (key) {
       // \u0003 maps to ctrl+c input
       process.exit();
     case "w":
-      console.log("Move: up");
       setTimeout(() => {
         connection.write("Move: up");
       }, 50);
       break;
     case "a":
-      console.log("Move: left");
       setTimeout(() => {
         connection.write("Move: left");
       }, 50);
       break;
     case "s":
-      console.log("Move: down");
       setTimeout(() => {
         connection.write("Move: down");
       }, 50);
       break;
     case "d":
-      console.log("Move: right");
       setTimeout(() => {
         connection.write("Move: right");
+      }, 50);
+      break;
+    case "x":
+      setTimeout(() => {
+        connection.write("Say: hi hi hi!");
       }, 50);
       break;
   }
